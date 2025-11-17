@@ -4,3 +4,29 @@
   padding: 0px;
   box-sizing: border-box;
 }
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+
+.node__container {
+  margin: 20px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex: 1 0 auto; /* the basis here is the height */
+}
+
+.node {
+  border: 1px solid black;
+  flex: 1 0 calc(100%/4);
+}
+
+.controls {
+  flex: 0 1 100px;
+  align-self: center;
+}
