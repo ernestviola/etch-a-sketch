@@ -42,11 +42,19 @@ button:hover {
   background-color: #007bff;;
 }
 
+form {
+  margin: 16px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+}
+
 .node__container {
   border: 1px solid black;
   border-radius: 10px;
   overflow: hidden;
-  margin: 20px;
+  margin: 12px 24px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -59,6 +67,7 @@ button:hover {
 
 .controls {
   align-self: center;
-  margin: 40px 0px 10px ;
+  margin-top: 40px;
+  text-align: center;
 }
 
