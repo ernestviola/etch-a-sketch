@@ -43,7 +43,9 @@ button:hover {
 }
 
 .node__container {
-  
+  border: 1px solid black;
+  border-radius: 10px;
+  overflow: hidden;
   margin: 20px;
   display: flex;
   flex-direction: row;
@@ -53,7 +55,6 @@ button:hover {
 
 .node {
   flex: 0 0 calc(100% / var(--width));
-  border: 1px solid black;
 }
 
 .controls {
