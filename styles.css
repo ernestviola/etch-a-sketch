@@ -1,8 +1,14 @@
+:root {
+  --width: 4;
+  --height: 4;
+}
+
 * {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
+  
 }
 
 body {
@@ -12,21 +18,46 @@ body {
   align-items: stretch;
 }
 
+label {
+  font-size: 16px;
+}
+
+input {
+  border-radius: 5px;
+  padding: 4px 8px;
+  width: 80px;
+}
+
+button {
+  border: #77b9ff;
+  border-radius: 5px;
+  padding: 4px 12px;
+  font-size: 16px;
+  background-color: #3a99ff;
+  color: white;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: #007bff;;
+}
 
 .node__container {
+  
   margin: 20px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  flex: 1 0 auto; /* the basis here is the height */
+  flex: 1 0 calc(100% / (var(--height) ));
 }
 
 .node {
+  flex: 0 0 calc(100% / var(--width));
   border: 1px solid black;
-  flex: 1 0 calc(100%/4);
 }
 
 .controls {
-  flex: 0 1 100px;
   align-self: center;
+  margin: 40px 0px 10px ;
 }
+
