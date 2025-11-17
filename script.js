@@ -1,10 +1,9 @@
 // initialize the page with a number of nodes
 let currentNodeCount = 0;
-
 const width = document.querySelector('#width');
 const height = document.querySelector('#height');
-
 updateNodeCount(width.value*height.value);
+
 
 width.addEventListener('input', () => {
   if (Number(width.value) > Number(width.max)) return;
@@ -28,7 +27,6 @@ button.addEventListener('click',(event) => {
 
 function updateNodeCount(num) {
   const nodeContainer = document.querySelector('.node__container');
-
   if (num < currentNodeCount) {
     for (let i = currentNodeCount; i > num; i--) {
       nodeContainer.removeChild(nodeContainer.lastElementChild);
@@ -45,11 +43,9 @@ function createNode(nodeContainer) {
   const node = document.createElement('div');
   node.classList.add('node')
   node.addEventListener('mouseover', () => {
-    // get opacity
     let r = g = b = a = 0;
-
     if (node.style.backgroundColor) {
-      // increase opacity
+      // below is a regex which only grabs the rgba values and commas
       const values = node.style.backgroundColor.replace(/^rgba?\(|\)$/g, '').split(',');
       r = parseInt(values[0].trim()) - 10;
       g = parseInt(values[1].trim()) - 10;
